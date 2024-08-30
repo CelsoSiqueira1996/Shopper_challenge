@@ -172,17 +172,33 @@ docker-compose up
 
 ## Configuração de Variáveis de Ambiente
 
-O arquivo `.env` será criado automaticamente pelo script de testes e deve conter a variável:
+Um arquivo `.env` deverá ser criado e deve conter a variável:
 
 ```env
 GEMINI_API_KEY=<sua chave da API>
 ```
 
-## Como Utilizar LLMs
-
-Você pode usar LLMs como uma ferramenta para melhorar seu código, mas lembre-se de que a avaliação será feita com base no seu próprio trabalho. Não copie e cole diretamente códigos gerados por LLMs.
-
 ## Links Úteis
 
 - [Documentação do Google Gemini (API Key)](https://ai.google.dev/gemini-api/docs/api-key)
 - [Documentação do Google Gemini (Vision)](https://ai.google.dev/gemini-api/docs/vision)
+
+## Observações adicionais
+
+- Foi utilizado o Prisma como ferramenta para gerenciar o banco de dados. O banco de dados escolhido para esse projeto foi o SQLite (banco relacional).
+- Foram criadas duas tabelas, uma para os consumidores e outra para as medidas, sendo a relação: um consumidor possui varias medidas e uma medida possui apenas um consumidor relacionado.
+- Para garantir a validação dos dados, foi utilizada a biblioteca zod.
+- Algumas implementações extras foram feitas, como por exemplo, tratamento de erros gerais, sendo categorizados como status 500 - Erro interno do servidor.
+
+  ### Modelo adotado para o cliente e para a medida:
+    -Cliente:
+      - id: string (uuid)
+      - customer_code: string
+    -Medidas:
+      - measure_uuid: string (uuid)
+      - image_url: string
+      - measure_value: integer
+      - measure_datetime: datetime
+      - measure_type: string
+      - has_confirmed: boolean
+      - customer_code: string
