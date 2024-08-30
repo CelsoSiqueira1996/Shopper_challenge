@@ -45,7 +45,7 @@ Desenvolver o back-end de um serviço para gerenciar a leitura individualizada d
 - Confirma ou corrige o valor lido pelo LLM.
 - Valida dados, verifica a existência e se já foi confirmada a leitura.
 - **Request Body**:
-  ```json
+  `````bash
   {
     "measure_uuid": "string",
     "confirmed_value": integer
