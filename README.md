@@ -28,7 +28,7 @@ Desenvolver o back-end de um serviço para gerenciar a leitura individualizada d
 - Recebe uma imagem em base64 e extrai a medição através de uma API LLM.
 - Valida dados, verifica duplicidade de leitura no mês, e integra com a API Gemini para extrair o valor da imagem.
 - **Request Body**:
-  ```json
+  ```bash
   {
     "image": "base64",
     "customer_code": "string",
