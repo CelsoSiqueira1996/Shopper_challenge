@@ -104,7 +104,7 @@ Este endpoint confirma ou corrige o valor lido pelo LLM.
   ```bash
   {
     "error_code": "MEASURE_NOT_FOUND",
-    "error_description": "Leitura do mês já realizada"
+    "error_description": "Nenhuma leitura encontrada"
   }
   ```
 
@@ -113,7 +113,7 @@ Este endpoint confirma ou corrige o valor lido pelo LLM.
   ```bash
   {
     "error_code": "CONFIRMATION_DUPLICATE",
-    "error_description": "Leitura do mês já realizada"
+    "error_description": "Leitura do mês já confirmada"
   }
   ```
 
