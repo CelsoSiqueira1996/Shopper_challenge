@@ -28,7 +28,7 @@ Este endpoint recebe uma imagem em base64, consulta a API do Gemini para extrair
 
 #### Request Body
 
-```json
+```bash
 {
   "image": "base64",
   "customer_code": "string",
@@ -41,7 +41,7 @@ Este endpoint recebe uma imagem em base64, consulta a API do Gemini para extrair
 
 - **200 - Operação realizada com sucesso**
 
-  ```json
+  ```bash
   {
     "image_url": "string",
     "measure_value": "integer",
@@ -51,7 +51,7 @@ Este endpoint recebe uma imagem em base64, consulta a API do Gemini para extrair
 
 - **400 - Dados inválidos**
 
-  ```json
+  ```bash
   {
     "error_code": "INVALID_DATA",
     "error_description": "Descrição do erro"
@@ -60,7 +60,7 @@ Este endpoint recebe uma imagem em base64, consulta a API do Gemini para extrair
 
 - **409 - Leitura já realizada**
 
-  ```json
+  ```bash
   {
     "error_code": "DOUBLE_REPORT",
     "error_description": "Leitura do mês já realizada"
@@ -73,7 +73,7 @@ Este endpoint confirma ou corrige o valor lido pelo LLM.
 
 #### Request Body
 
-```json
+```bash
 {
   "measure_uuid": "string",
   "confirmed_value": "integer"
@@ -84,7 +84,7 @@ Este endpoint confirma ou corrige o valor lido pelo LLM.
 
 - **200 - Operação realizada com sucesso**
 
-  ```json
+  ```bash
   {
     "success": true
   }
@@ -92,7 +92,7 @@ Este endpoint confirma ou corrige o valor lido pelo LLM.
 
 - **400 - Dados inválidos**
 
-  ```json
+  ```bash
   {
     "error_code": "INVALID_DATA",
     "error_description": "Descrição do erro"
@@ -101,7 +101,7 @@ Este endpoint confirma ou corrige o valor lido pelo LLM.
 
 - **404 - Leitura não encontrada**
 
-  ```json
+  ```bash
   {
     "error_code": "MEASURE_NOT_FOUND",
     "error_description": "Leitura do mês já realizada"
@@ -110,7 +110,7 @@ Este endpoint confirma ou corrige o valor lido pelo LLM.
 
 - **409 - Leitura já confirmada**
 
-  ```json
+  ```bash
   {
     "error_code": "CONFIRMATION_DUPLICATE",
     "error_description": "Leitura do mês já realizada"
@@ -129,7 +129,7 @@ Este endpoint lista as medidas realizadas por um determinado cliente.
 
 - **200 - Operação realizada com sucesso**
 
-  ```json
+  ```bash
   {
     "customer_code": "string",
     "measures": [
@@ -146,7 +146,7 @@ Este endpoint lista as medidas realizadas por um determinado cliente.
 
 - **400 - Tipo de medição inválida**
 
-  ```json
+  ```bash
   {
     "error_code": "INVALID_TYPE",
     "error_description": "Tipo de medição não permitida"
@@ -155,7 +155,7 @@ Este endpoint lista as medidas realizadas por um determinado cliente.
 
 - **404 - Nenhum registro encontrado**
 
-  ```json
+  ```bash
   {
     "error_code": "MEASURES_NOT_FOUND",
     "error_description": "Nenhuma leitura encontrada"
