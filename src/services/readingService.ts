@@ -1,4 +1,3 @@
-import { env } from "../env";
 import BaseError from "../errors/baseError";
 import DuplicateError from "../errors/duplicateError";
 import NotFoundError from "../errors/notFoundError";
