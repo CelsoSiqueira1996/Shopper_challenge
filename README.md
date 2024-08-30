@@ -190,15 +190,15 @@ GEMINI_API_KEY=<sua chave da API>
 - Para garantir a validação dos dados, foi utilizada a biblioteca zod.
 - Algumas implementações extras foram feitas, como por exemplo, tratamento de erros gerais, sendo categorizados como status 500 - Erro interno do servidor.
 
-  ### Modelo adotado para o cliente e para a medida:
-    -Cliente:
-      - id: string (uuid)
-      - customer_code: string
-    -Medidas:
-      - measure_uuid: string (uuid)
-      - image_url: string
-      - measure_value: integer
-      - measure_datetime: datetime
-      - measure_type: string
-      - has_confirmed: boolean
-      - customer_code: string
+### Modelo adotado para o cliente e para a medida:
+  #### - Cliente:
+    - id: string (uuid)
+    - customer_code: string
+  #### - Medidas:
+    - measure_uuid: string (uuid)
+    - image_url: string
+    - measure_value: integer
+    - measure_datetime: datetime
+    - measure_type: string
+    - has_confirmed: boolean
+    - customer_code: string
